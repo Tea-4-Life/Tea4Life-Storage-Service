@@ -22,6 +22,7 @@ jobs:
         run: |
           mvn clean compile jib:build \
             -DskipTests \
+            -Djib.to.image=${{ secrets.DOCKER_USERNAME }}/tea4life-storage-service:latest \
             -Djib.to.auth.username=${{ secrets.DOCKER_USERNAME }} \
             -Djib.to.auth.password=${{ secrets.DOCKER_PASSWORD }}
 
