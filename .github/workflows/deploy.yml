@@ -19,7 +19,6 @@ jobs:
           distribution: 'corretto'
 
       - name: Build & Push Docker Image with Jib
-        if: github.ref == 'refs/heads/main'
         run: |
           mvn clean compile jib:build \
             -DskipTests \
