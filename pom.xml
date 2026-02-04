@@ -137,6 +137,11 @@
                             huynhducphu2502/${project.artifactId}
                         </image>
                     </to>
+                    <container>
+                        <jvmFlags>
+                            <jvmFlag>--enable-native-access=ALL-UNNAMED</jvmFlag>
+                        </jvmFlags>
+                    </container>
                 </configuration>
             </plugin>
 
