@@ -12,7 +12,7 @@
     </parent>
 
     <groupId>tea4life</groupId>
-    <artifactId>Tea4Life-Storage-Service</artifactId>
+    <artifactId>tea4life-storage-service</artifactId>
     <version>1.0.0</version>
     <name>${project.artifactId}</name>
     <description>Tea4Life – Spring Boot Microservice</description>
