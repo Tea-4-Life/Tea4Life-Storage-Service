@@ -18,9 +18,6 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 @Configuration
 public class SecurityConfig {
 
-    @Value("${security.cors.allowed-origins}")
-    private String allowedOrigins;
-
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) {
         return http
