@@ -1,4 +1,4 @@
-package tea4life.base.dto.response;
+package tea4life.storage_service.dto.response;
 
 /**
  * Admin 2/4/2026

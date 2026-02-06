@@ -1,4 +1,4 @@
-package tea4life.base.dto.base;
+package tea4life.storage_service.dto.base;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;

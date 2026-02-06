@@ -1,4 +1,4 @@
-package tea4life.base.controller;
+package tea4life.storage_service.controller;
 
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import tea4life.base.dto.base.ApiResponse;
-import tea4life.base.dto.request.FileMoveRequest;
-import tea4life.base.dto.request.PresignedUrlRequest;
-import tea4life.base.dto.response.PresignedUrlResponse;
-import tea4life.base.service.StorageService;
+import tea4life.storage_service.dto.base.ApiResponse;
+import tea4life.storage_service.dto.request.FileMoveRequest;
+import tea4life.storage_service.dto.request.PresignedUrlRequest;
+import tea4life.storage_service.dto.response.PresignedUrlResponse;
+import tea4life.storage_service.service.StorageService;
 
 /**
  * Admin 2/4/2026

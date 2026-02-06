@@ -1,4 +1,4 @@
-package tea4life.base.advice;
+package tea4life.storage_service.advice;
 
 import lombok.extern.slf4j.Slf4j;
 import org.jspecify.annotations.NonNull;
@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import software.amazon.awssdk.services.s3.model.S3Exception;
-import tea4life.base.dto.base.ApiResponse;
+import tea4life.storage_service.dto.base.ApiResponse;
 
 /**
  * Admin 2/4/2026

@@ -1,4 +1,4 @@
-package tea4life.base;
+package tea4life.storage_service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

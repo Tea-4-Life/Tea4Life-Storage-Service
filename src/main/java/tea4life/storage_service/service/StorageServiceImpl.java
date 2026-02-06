@@ -1,4 +1,4 @@
-package tea4life.base.service;
+package tea4life.storage_service.service;
 
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
@@ -15,9 +15,9 @@ import software.amazon.awssdk.services.s3.presigner.S3Presigner;
 import software.amazon.awssdk.services.s3.presigner.model.PutObjectPresignRequest;
 import software.amazon.awssdk.transfer.s3.S3TransferManager;
 import software.amazon.awssdk.transfer.s3.model.CopyRequest;
-import tea4life.base.dto.request.FileMoveRequest;
-import tea4life.base.dto.request.PresignedUrlRequest;
-import tea4life.base.dto.response.PresignedUrlResponse;
+import tea4life.storage_service.dto.request.FileMoveRequest;
+import tea4life.storage_service.dto.request.PresignedUrlRequest;
+import tea4life.storage_service.dto.response.PresignedUrlResponse;
 
 import java.time.Duration;
 import java.util.UUID;

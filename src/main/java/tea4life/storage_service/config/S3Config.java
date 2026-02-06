@@ -1,4 +1,4 @@
-package tea4life.base.config;
+package tea4life.storage_service.config;
 
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
