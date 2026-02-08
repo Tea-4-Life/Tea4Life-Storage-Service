@@ -19,7 +19,6 @@ import tea4life.storage_service.service.StorageService;
  **/
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/v1/storage")
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class StorageController {
 
@@ -28,7 +27,7 @@ public class StorageController {
     /**
      * Endpoint dành cho Frontend: Lấy link để tự upload ảnh.
      */
-    @PostMapping("/presigned-url")
+    @PostMapping("/storage/presigned-url")
     public ApiResponse<PresignedUrlResponse> getPresignedUrl(@RequestBody PresignedUrlRequest request) {
         return new ApiResponse<>(storageService.generatePresignedUrl(request));
     }
@@ -36,7 +35,7 @@ public class StorageController {
     /**
      * Endpoint nội bộ (gọi qua Feign): Xác nhận và di chuyển file.
      */
-    @PostMapping("/confirm")
+    @PostMapping("/storage/confirm")
     public ApiResponse<String> confirmFile(@RequestBody FileMoveRequest request) {
         return new ApiResponse<>(storageService.confirmAndMoveFile(request));
     }
