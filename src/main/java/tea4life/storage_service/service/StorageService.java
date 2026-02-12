@@ -12,4 +12,6 @@ public interface StorageService {
     PresignedUrlResponse generatePresignedUrl(PresignedUrlRequest request);
 
     String confirmAndMoveFile(FileMoveRequest request);
+
+    void deleteFile(String objectKey);
 }

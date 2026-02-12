@@ -102,4 +102,19 @@ public class StorageServiceImpl implements StorageService {
         return destinationKey;
     }
 
+    @Override
+    public void deleteFile(String objectKey) {
+        log.info("Deleting object from S3: {}", objectKey);
+
+        s3AsyncClient.deleteObject(DeleteObjectRequest.builder()
+                        .bucket(bucketName)
+                        .key(objectKey)
+                        .build())
+                .thenRun(() -> log.info("Successfully deleted: {}", objectKey))
+                .exceptionally(ex -> {
+                    log.error("Failed to delete object {}: {}", objectKey, ex.getMessage());
+                    return null;
+                });
+    }
+
 }
