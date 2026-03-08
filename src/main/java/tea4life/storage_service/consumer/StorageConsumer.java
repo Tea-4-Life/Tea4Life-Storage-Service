@@ -20,10 +20,10 @@ public class StorageConsumer {
 
     StorageService storageService;
 
-    @KafkaListener(topics = "storage-delete-file-topic", groupId = "tea4life-storage-group")
+    @KafkaListener(topics = "${spring.kafka.topic.storage-delete-file}")
     public void listenDelete(String objectKey) {
         log.info("Received delete request from Kafka: {}", objectKey);
         storageService.deleteFile(objectKey);
     }
-    
+
 }
