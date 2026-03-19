@@ -22,8 +22,8 @@ public class StorageConsumer {
 
     @KafkaListener(topics = "${spring.kafka.topic.storage-delete-file}")
     public void listenDelete(String objectKey) {
-        log.info("Received delete request from Kafka: {}", objectKey);
-        storageService.deleteFile(objectKey);
+        String normalizedObjectKey = StorageObjectKeyNormalizer.normalize(objectKey);
+        log.info("Received delete request from Kafka: raw={}, normalized={}", objectKey, normalizedObjectKey);
+        storageService.deleteFile(normalizedObjectKey);
     }
-
 }
